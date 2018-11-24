@@ -1,6 +1,6 @@
 /* eslint-disable */
-const serverUrl = 'http://localhost:4000'
-const frontUrl = 'http://localhost:8080'
+const serverUrl = 'http://api.yc.ailearning.pro'
+const frontUrl = 'http://web.yc.ailearning.pro'
 function emitNotification(n) {
     const idObj = {
         random: Math.random().toString(),
