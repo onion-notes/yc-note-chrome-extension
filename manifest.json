@@ -1,0 +1,29 @@
+{
+   "background": {
+      "scripts": [ "background.js", "jquery.js", "base64.js"]
+   },
+   // http://krasimirtsonev.com/blog/article/Send-message-from-web-page-to-chrome-extensions-background-script
+   "content_scripts": [
+        {
+            // "<all_urls>" 表示匹配所有地址
+            "matches": ["http://*/*"],
+            // 多个JS按顺序注入
+            "js": ["content-script.js"],
+            "run_at": "document_start"
+        }
+   ],
+   "browser_action": {
+      "default_icon": "onion.png",
+      "icons": [ "onion.png" ],
+      "name": "洋葱分享"
+   },
+   "icons": {
+      "16": "onion.png",
+      "48": "onion.png"
+   },
+   "manifest_version": 2,
+   "name": "洋葱分享",
+   "description": "洋葱分享",
+   "permissions": [ "tabs", "http://*/*", "https://*/*", "notifications", "storage"],
+   "version": "0.0.1"
+}
