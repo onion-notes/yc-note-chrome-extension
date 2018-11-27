@@ -2,12 +2,9 @@
    "background": {
       "scripts": [ "background.js", "jquery.js", "base64.js"]
    },
-   // http://krasimirtsonev.com/blog/article/Send-message-from-web-page-to-chrome-extensions-background-script
    "content_scripts": [
         {
-            // "<all_urls>" 表示匹配所有地址
             "matches": ["http://*/*"],
-            // 多个JS按顺序注入
             "js": ["content-script.js"],
             "run_at": "document_start"
         }
